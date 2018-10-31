@@ -7,18 +7,18 @@
   
   <title>hexo配置参考 | 港桥城事</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.html”站点配置文件“ 一般指 _config.yml 。站点配置文件是博客的总配置，一切基础参数，插件参数，主题配置都在这里进行。 注意：在配置文件中，冒号后一般带空格，文字参数一般带 ‘ ‘ 引用。建议配置前做好备份。 部分注释来自互联网。 Hexo ConfigurationDocs: https">
+  <meta name="description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.htmlhttp://theme-next.iissnan.com/faqs.html#read-more如何设置「阅读全文」？在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo配置参考">
 <meta property="og:url" content="http://zhu4ce4.github.io/20181031/hexo配置参考/index.html">
 <meta property="og:site_name" content="港桥城事">
-<meta property="og:description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.html”站点配置文件“ 一般指 _config.yml 。站点配置文件是博客的总配置，一切基础参数，插件参数，主题配置都在这里进行。 注意：在配置文件中，冒号后一般带空格，文字参数一般带 ‘ ‘ 引用。建议配置前做好备份。 部分注释来自互联网。 Hexo ConfigurationDocs: https">
+<meta property="og:description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.htmlhttp://theme-next.iissnan.com/faqs.html#read-more如何设置「阅读全文」？在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-31T02:58:54.021Z">
+<meta property="og:updated_time" content="2018-10-31T03:05:41.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo配置参考">
-<meta name="twitter:description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.html”站点配置文件“ 一般指 _config.yml 。站点配置文件是博客的总配置，一切基础参数，插件参数，主题配置都在这里进行。 注意：在配置文件中，冒号后一般带空格，文字参数一般带 ‘ ‘ 引用。建议配置前做好备份。 部分注释来自互联网。 Hexo ConfigurationDocs: https">
+<meta name="twitter:description" content="#文章来源：https://ojhdt.club/20181002/hexo-1/index.htmlhttp://theme-next.iissnan.com/faqs.html#read-more如何设置「阅读全文」？在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文">
   
     <link rel="alternate" href="/atom.xml" title="港桥城事" type="application/atom+xml">
   
@@ -91,7 +91,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#文章来源：<a href="https://ojhdt.club/20181002/hexo-1/index.html" target="_blank" rel="noopener">https://ojhdt.club/20181002/hexo-1/index.html</a><br>”站点配置文件“ 一般指 _config.yml 。站点配置文件是博客的总配置，一切基础参数，插件参数，主题配置都在这里进行。</p>
+        <p>#文章来源：<a href="https://ojhdt.club/20181002/hexo-1/index.html" target="_blank" rel="noopener">https://ojhdt.club/20181002/hexo-1/index.html</a><br><a href="http://theme-next.iissnan.com/faqs.html#read-more" target="_blank" rel="noopener">http://theme-next.iissnan.com/faqs.html#read-more</a><br>如何设置「阅读全文」？<br>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
+<p>在文章中使用 <a id="more"></a> 手动进行截断，Hexo 提供的方式 推荐<br>在文章的 front-matter 中添加 description，并提供文章摘录<br>自动形成摘要，在 主题配置文件 中添加：</p>
+<p>auto_excerpt:<br>  enable: true<br>  length: 150<br>默认截取的长度为 150 字符，可以根据需要自行设定</p>
+<p>建议使用 <!-- more -->（即第一种方式），除了可以精确控制需要显示的摘录内容以外， 这种方式也可以让 Hexo 中的插件更好的识别。</p>
+<p>”站点配置文件“ 一般指 _config.yml 。站点配置文件是博客的总配置，一切基础参数，插件参数，主题配置都在这里进行。</p>
 <p>注意：在配置文件中，冒号后一般带空格，文字参数一般带 ‘ ‘ 引用。建议配置前做好备份。</p>
 <p>部分注释来自互联网。</p>
 <h1 id="Hexo-Configuration"><a href="#Hexo-Configuration" class="headerlink" title="Hexo Configuration"></a>Hexo Configuration</h1><h2 id="Docs-https-hexo-io-docs-configuration-html"><a href="#Docs-https-hexo-io-docs-configuration-html" class="headerlink" title="Docs: https://hexo.io/docs/configuration.html"></a>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">https://hexo.io/docs/configuration.html</a></h2><h2 id="Source-https-github-com-hexojs-hexo"><a href="#Source-https-github-com-hexojs-hexo" class="headerlink" title="Source: https://github.com/hexojs/hexo/"></a>Source: <a href="https://github.com/hexojs/hexo/" target="_blank" rel="noopener">https://github.com/hexojs/hexo/</a></h2><h1 id="Site（标题等必填）"><a href="#Site（标题等必填）" class="headerlink" title="Site（标题等必填）"></a>Site（标题等必填）</h1><p>#网站标题<br>title: </p>
@@ -143,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhu4ce4.github.io/20181031/hexo配置参考/" data-id="cjnwko2pu0000f48x7hvoe6hl" class="article-share-link">Share</a>
+      <a data-url="http://zhu4ce4.github.io/20181031/hexo配置参考/" data-id="cjnwkwwsk0000k08xlbip94sm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
