@@ -303,8 +303,10 @@
 
       
         
-          <p>#文章来源：<a href="https://ojhdt.club/20181002/hexo-1/index.html" target="_blank" rel="noopener">https://ojhdt.club/20181002/hexo-1/index.html</a><br><a href="http://theme-next.iissnan.com/faqs.html#read-more" target="_blank" rel="noopener">http://theme-next.iissnan.com/faqs.html#read-more</a><br>如何设置「阅读全文」？<br>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
-<p>在文章中使用
+          <p>#文章来源：<a href="https://ojhdt.club/20181002/hexo-1/index.html" target="_blank" rel="noopener">https://ojhdt.club/20181002/hexo-1/index.html</a><br>如何设置「阅读全文」？<br>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
+<p>在文章中使用 &lt;删!–掉 more 我–&gt; 手动进行截断，Hexo 提供的方式 推荐<br>在文章的 front-matter 中添加 description，并提供文章摘录<br>自动形成摘要，在 主题配置文件 中添加：</p>
+<p>auto_excerpt:<br>  enable: true<br>  length: 150<br>默认截取的长度为 150 字符，可以根据需要自行设定</p>
+<p>建议使用
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/20181031/hexo配置参考/#more" rel="contents">
@@ -428,13 +430,17 @@
 
       
         
-          
-            <p>热烈庆祝本博客于2018年10月31日万圣节正式开通！<br>现场情况是：鞭炮齐鸣~锣鼓喧天~人山人海~~</p>
-
-          
+          <p>热烈庆祝本博客于2018年10月31日万圣节正式开通！<br>现场情况是：鞭炮齐鸣~锣鼓喧天~人山人海~~<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20181031/新的开始/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
