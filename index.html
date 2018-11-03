@@ -233,6 +233,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181103/java学习笔记2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="永川长江大桥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="港桥城事">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/20181103/java学习笔记2/" itemprop="url">java学习笔记2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T21:57:49+08:00">
+                2018-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>###小练习<br>银行账户存取练习<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20181103/java学习笔记2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181031/java学习笔记1/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -303,7 +427,7 @@
 
       
         
-          <p>###三元表达式嵌套使用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"今天星期几？"</span>);</span><br><span class="line">        Scanner scanner001=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> day=scanner001.nextInt();</span><br><span class="line">        String k=day&lt;<span class="number">6</span>? (day&lt;=<span class="number">0</span>? <span class="string">"输入错误"</span>:<span class="string">"工作日"</span>):(day&gt;<span class="number">7</span>? <span class="string">"输入错误"</span>:<span class="string">"休息日"</span>);</span><br><span class="line">        System.out.println(k);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <p>###类、抽象类、接口<br>类是抽象的概念集合，表示的是一个共性的产物. 抽象类是对一种事物的抽象，即对类抽象. 而接口是抽象方法的集合. 抽象类是对整个类整体进行抽象描述，包括属性、方法，但是接口却是对类的方法进行抽象. (接口中也可以定义变量, 但是接口中的变量会被隐式地指定为public static final变量)<br> 举个简单的例子, 有一个抽象类飞机类Airplane 和 一个抽象类鸡类chicken, Airplane类描述了飞机的材料, 载人载货两等属性和具有飞的能力(即方法), 你可以用实现某个接口的方式给它的子类赋予一般飞机原本不具有的能力(比如轰炸)和属性(比如隐形).<br>一般的鸡类不会飞, 但是小明家的公鸡(鸡的子类)会飞, 此时可以为它设计一个接口:Fly() , 接口里有个方法fly(). 飞机和小明家的公鸡都会飞,  那么也可以不在Airplane中写飞的方法, Airplane可以根据自己的需要实现Fly这个接口。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/20181031/java学习笔记1/#more" rel="contents">
@@ -313,7 +437,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -641,7 +765,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
