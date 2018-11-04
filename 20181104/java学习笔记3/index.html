@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="java笔记,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="永川朱沱松溉何埂港桥新城旧事">
-<meta name="keywords" content="朱沱松溉何埂">
-<meta property="og:type" content="website">
-<meta property="og:title" content="港桥城事">
-<meta property="og:url" content="http://zhu4ce4.github.io/index.html">
+<meta name="description" content="#文件夹遍历练习 12345678910111213141516171819202122232425262728293031323334353637383940414243import java.io.File;import java.time.LocalDateTime;import java.time.ZoneOffset;import java.util.Arrays;class TestF">
+<meta name="keywords" content="java笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java学习笔记3">
+<meta property="og:url" content="http://zhu4ce4.github.io/20181104/java学习笔记3/index.html">
 <meta property="og:site_name" content="港桥城事">
-<meta property="og:description" content="永川朱沱松溉何埂港桥新城旧事">
+<meta property="og:description" content="#文件夹遍历练习 12345678910111213141516171819202122232425262728293031323334353637383940414243import java.io.File;import java.time.LocalDateTime;import java.time.ZoneOffset;import java.util.Arrays;class TestF">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-04T08:15:56.403Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="港桥城事">
-<meta name="twitter:description" content="永川朱沱松溉何埂港桥新城旧事">
+<meta name="twitter:title" content="java学习笔记3">
+<meta name="twitter:description" content="#文件夹遍历练习 12345678910111213141516171819202122232425262728293031323334353637383940414243import java.io.File;import java.time.LocalDateTime;import java.time.ZoneOffset;import java.util.Arrays;class TestF">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zhu4ce4.github.io/">
+  <link rel="canonical" href="http://zhu4ce4.github.io/20181104/java学习笔记3/">
 
 
 
 
 
-  <title>港桥城事</title>
+  <title>java学习笔记3 | 港桥城事</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -218,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20181104/java学习笔记3/" itemprop="url">java学习笔记3</a></h1>
+          <h1 class="post-title" itemprop="name headline">java学习笔记3</h1>
         
 
         <div class="post-meta">
@@ -302,15 +300,11 @@
       
 
       
-        
-          
-            <p>#文件夹遍历练习</p>
+        <p>#文件夹遍历练习</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.ZoneOffset;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestFile</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        File f = new File("E:\\git\\.idea");</span></span><br><span class="line"><span class="comment">//        System.out.println(longToDT(f.lastModified()));</span></span><br><span class="line">        getfile(<span class="string">"E:\\git\\.idea"</span>, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LocalDateTime <span class="title">longToDT</span><span class="params">(<span class="keyword">long</span> dt)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (LocalDateTime.ofEpochSecond(dt / <span class="number">1000</span>, <span class="number">0</span>, ZoneOffset.ofHours(<span class="number">8</span>)));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getfile</span><span class="params">(String pathname, <span class="keyword">int</span> tabnum)</span> </span>&#123;</span><br><span class="line">        File f = <span class="keyword">new</span> File(pathname);</span><br><span class="line">        System.out.println(f.getName());</span><br><span class="line">        File[] fs = f.listFiles();	<span class="comment">//当f是文件不是目录时调用listFile()方法返回Null   空文件夹调用时返回的是一个空的数组(注意null与长度为0的数组的区别！)</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span>!=fs &amp;&amp; fs.length != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (File file : fs) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!file.isDirectory()) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tabnum; i++) &#123;</span><br><span class="line">                        System.out.print(<span class="string">"\t"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(file.getName());</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tabnum; i++) &#123;</span><br><span class="line">                        System.out.print(<span class="string">"\t"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    getfile(file.getAbsolutePath(), tabnum + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">null</span>!=fs &amp;&amp; fs.length==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tabnum; i++) &#123;</span><br><span class="line">                System.out.print(<span class="string">"\t"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileOutputStreamDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            File f = <span class="keyword">new</span> File(<span class="string">"F:/328.jpg"</span>);</span><br><span class="line">            FileInputStream fi = <span class="keyword">new</span> FileInputStream(f);</span><br><span class="line">            <span class="keyword">byte</span>[] each = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">102400</span>];     <span class="comment">//102400byte=1kb</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; f.length() / <span class="number">102400</span> + <span class="number">1</span>; i++) &#123;</span><br><span class="line">                    fi.read(each);</span><br><span class="line">                    File fe = <span class="keyword">new</span> File(<span class="string">"F:/res/328.jpg-"</span> + i);</span><br><span class="line">                    <span class="keyword">if</span> (!fe.getParentFile().exists()) &#123;</span><br><span class="line">                        fe.getParentFile().mkdirs();</span><br><span class="line">                    &#125;</span><br><span class="line">                    FileOutputStream fo = <span class="keyword">new</span> FileOutputStream(fe);</span><br><span class="line">                    fo.write(each);</span><br><span class="line">                    fo.close();</span><br><span class="line">                &#125;</span><br><span class="line">                fi.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileIntputStreamDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        File f = <span class="keyword">new</span> File(<span class="string">"f:/bing/328.jpg"</span>);</span><br><span class="line">        <span class="keyword">if</span> (!f.getParentFile().exists()) &#123;</span><br><span class="line">            f.getParentFile().mkdirs();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            FileOutputStream ff = <span class="keyword">new</span> FileOutputStream(f);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">                File fi = <span class="keyword">new</span> File(<span class="string">"f:/res/328.jpg-"</span> + i);</span><br><span class="line">                FileInputStream fii = <span class="keyword">new</span> FileInputStream(fi);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[(<span class="keyword">int</span>) fi.length()];</span><br><span class="line">                    fii.read(b);</span><br><span class="line">                    ff.write(b);</span><br><span class="line">                    fii.close();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                ff.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -325,262 +319,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181103/java学习笔记2/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永川长江大桥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="港桥城事">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20181103/java学习笔记2/" itemprop="url">java学习笔记2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T21:57:49+08:00">
-                2018-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/java笔记/" rel="tag"># java笔记</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>###小练习<br>银行账户存取练习<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/20181103/java学习笔记2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/20181103/java学习笔记2/" rel="next" title="java学习笔记2">
+                <i class="fa fa-chevron-left"></i> java学习笔记2
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181031/java学习笔记1/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永川长江大桥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="港桥城事">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20181031/java学习笔记1/" itemprop="url">java学习笔记1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T17:01:12+08:00">
-                2018-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>###类、抽象类、接口<br>类是抽象的概念集合，表示的是一个共性的产物. 抽象类是对一种事物的抽象，即对类抽象. 而接口是抽象方法的集合. 抽象类是对整个类整体进行抽象描述，包括属性、方法，但是接口却是对类的方法进行抽象. (接口中也可以定义变量, 但是接口中的变量会被隐式地指定为public static final变量)<br> 举个简单的例子, 有一个抽象类飞机类Airplane 和 一个抽象类鸡类chicken, Airplane类描述了飞机的材料, 载人载货两等属性和具有飞的能力(即方法), 你可以用实现某个接口的方式给它的子类赋予一般飞机原本不具有的能力(比如轰炸)和属性(比如隐形).<br>一般的鸡类不会飞, 但是小明家的公鸡(鸡的子类)会飞, 此时可以为它设计一个接口:Fly() , 接口里有个方法fly(). 飞机和小明家的公鸡都会飞,  那么也可以不在Airplane中写飞的方法, Airplane可以根据自己的需要实现Fly这个接口。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/20181031/java学习笔记1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -590,261 +358,11 @@
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181031/hexo配置参考/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永川长江大桥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="港桥城事">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20181031/hexo配置参考/" itemprop="url">hexo配置参考</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T10:57:34+08:00">
-                2018-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>#文章来源：<a href="https://ojhdt.club/20181002/hexo-1/index.html" target="_blank" rel="noopener">https://ojhdt.club/20181002/hexo-1/index.html</a><br>如何设置「阅读全文」？<br>在首页显示一篇文章的部分内容，并提供一个链接跳转到全文页面是一个常见的需求。 NexT 提供三种方式来控制文章在首页的显示方式。 也就是说，在首页显示文章的摘录并显示 阅读全文 按钮，可以通过以下方法：</p>
-<p>在文章中使用 &lt;删!–掉 more 我–&gt; 手动进行截断，Hexo 提供的方式 推荐<br>在文章的 front-matter 中添加 description，并提供文章摘录<br>自动形成摘要，在 主题配置文件 中添加：</p>
-<p>auto_excerpt:<br>  enable: true<br>  length: 150<br>默认截取的长度为 150 字符，可以根据需要自行设定</p>
-<p>建议使用
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/20181031/hexo配置参考/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </div>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181031/新的开始/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永川长江大桥">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="港桥城事">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20181031/新的开始/" itemprop="url">新的开始</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T10:30:30+08:00">
-                2018-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>热烈庆祝本博客于2018年10月31日万圣节正式开通！<br>现场情况是：鞭炮齐鸣~锣鼓喧天~人山人海~~<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/20181031/新的开始/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -852,6 +370,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1057,6 +579,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
