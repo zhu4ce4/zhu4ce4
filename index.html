@@ -233,6 +233,257 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181113/java学习笔记6/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="永川长江大桥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="港桥城事">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/20181113/java学习笔记6/" itemprop="url">java学习笔记6</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-13T20:53:59+08:00">
+                2018-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="内部类分为四种：-非静态内部类-静态内部类-匿名类-本地类"><a href="#内部类分为四种：-非静态内部类-静态内部类-匿名类-本地类" class="headerlink" title="内部类分为四种： 非静态内部类  静态内部类  匿名类  本地类"></a>内部类分为四种： 非静态内部类  静态内部类  匿名类  本地类</h1><p>非静态内部类语法: new 外部类().new 内部类()<br>作为Hero的非静态内部类，是可以直接访问外部类的private实例属性name的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name; <span class="comment">// 姓名</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">float</span> hp; <span class="comment">// 血量</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">float</span> armor; <span class="comment">// 护甲</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">int</span> moveSpeed; <span class="comment">// 移动速度</span></span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 非静态内部类，只有一个外部类对象存在的时候，才有意义</span></span><br><span class="line">    <span class="comment">// 战斗成绩只有在一个英雄对象存在的时候才有意义</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">BattleScore</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> kill;</span><br><span class="line">        <span class="keyword">int</span> die;</span><br><span class="line">        <span class="keyword">int</span> assit;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">legendary</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (kill &gt;= <span class="number">8</span>)</span><br><span class="line">                System.out.println(name + <span class="string">"超神！"</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                System.out.println(name + <span class="string">"尚未超神！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Hero garen = <span class="keyword">new</span> Hero();</span><br><span class="line">        garen.name = <span class="string">"盖伦"</span>;</span><br><span class="line">        <span class="comment">// 实例化内部类</span></span><br><span class="line">        <span class="comment">// BattleScore对象只有在一个英雄对象存在的时候才有意义</span></span><br><span class="line">        <span class="comment">// 所以其实例化必须建立在一个外部类对象的基础之上</span></span><br><span class="line">        BattleScore score = garen.new BattleScore();</span><br><span class="line">        score.kill = <span class="number">9</span>;</span><br><span class="line">        score.legendary();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>静态内部类<br>与非静态内部类不同，静态内部类水晶类的实例化 不需要一个外部类的实例为基础，可以直接实例化<br>语法：new 外部类.静态内部类();<br>因为没有一个外部类的实例，所以在静态内部类里面不可以访问外部类的实例属性和方法<br>除了可以访问外部类的私有静态成员外，静态内部类和普通类没什么大的区别</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">float</span> hp;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">battleWin</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"battle win"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="comment">//敌方的水晶</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">EnemyCrystal</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> hp=<span class="number">5000</span>;</span><br><span class="line">         </span><br><span class="line">        <span class="comment">//如果水晶的血量为0，则宣布胜利</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkIfVictory</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(hp==<span class="number">0</span>)&#123;</span><br><span class="line">                Hero.battleWin();</span><br><span class="line">                 </span><br><span class="line">                <span class="comment">//静态内部类不能直接访问外部类的对象属性</span></span><br><span class="line">                System.out.println(name + <span class="string">" win this game"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//实例化静态内部类</span></span><br><span class="line">        Hero.EnemyCrystal crystal = <span class="keyword">new</span> Hero.EnemyCrystal();</span><br><span class="line">        crystal.checkIfVictory();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>匿名类 匿名类指的是在声明一个类的同时实例化它，使代码更加简洁精练通常情况下，要使用一个接口或者抽象类，都必须创建一个子类<br>有的时候，为了快速使用，直接实例化一个抽象类，并“当场”实现其抽象方法。既然实现了抽象方法，那么就是一个新的类，只是这个类，没有命名。这样的类，叫做匿名类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    String name; <span class="comment">//姓名</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">float</span> hp; <span class="comment">//血量</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">float</span> armor; <span class="comment">//护甲</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">int</span> moveSpeed; <span class="comment">//移动速度</span></span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span></span>;</span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">          </span><br><span class="line">        ADHero adh=<span class="keyword">new</span> ADHero();</span><br><span class="line">        <span class="comment">//通过打印adh，可以看到adh这个对象属于ADHero类</span></span><br><span class="line">        adh.attack();</span><br><span class="line">        System.out.println(adh);</span><br><span class="line">          </span><br><span class="line">        Hero h = <span class="keyword">new</span> Hero()&#123;</span><br><span class="line">            <span class="comment">//当场实现attack方法</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"新的进攻手段"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        h.attack();</span><br><span class="line">        <span class="comment">//通过打印h，可以看到h这个对象属于Hero$1这么一个系统自动分配的类名</span></span><br><span class="line">          </span><br><span class="line">        System.out.println(h);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>本地类可以理解为有名字的匿名类<br>与匿名类不一样的是，内部类必须声明在成员的位置，即与属性和方法平等的位置。<br>本地类和匿名类一样，直接声明在代码块里面，可以是主方法，for循环里等等地方</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    String name; <span class="comment">//姓名</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">float</span> hp; <span class="comment">//血量</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">float</span> armor; <span class="comment">//护甲</span></span><br><span class="line">          </span><br><span class="line">    <span class="keyword">int</span> moveSpeed; <span class="comment">//移动速度</span></span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span></span>;</span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">          </span><br><span class="line">        <span class="comment">//与匿名类的区别在于，本地类有了自定义的类名</span></span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">SomeHero</span> <span class="keyword">extends</span> <span class="title">Hero</span></span>&#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println( name+ <span class="string">" 新的进攻手段"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        SomeHero h  =<span class="keyword">new</span> SomeHero();</span><br><span class="line">        h.name =<span class="string">"地卜师"</span>;</span><br><span class="line">        h.attack();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为AD接口增加一个默认方法 attack(),为AP接口也增加一个默认方法 attack()<br>问： ADAPHero同时实现了AD,AP接口，那么 ADAPHero 对象调用attack()的时候，是调用哪个接口的attack()?<br>作为同时继承了AD和AP中的 默认方法attack，就必须在实现类中重写该方法从而免去到底调用哪个接口的attack方法这个模棱两可的问题:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ADAPHero</span> <span class="keyword">extends</span> <span class="title">Hero</span> <span class="keyword">implements</span> <span class="title">AD</span>,<span class="title">AP</span>,<span class="title">Mortal</span></span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">die</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name+ <span class="string">" 这个混合英雄挂了"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">//作为同时继承了AD和AP中的 默认方法attack，就必须在实现类中重写该方法</span></span><br><span class="line">    <span class="comment">//从而免去到底调用哪个接口的attack方法这个模棱两可的问题</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"这个ADAPHero自己的attack方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong><em>或者显示指定调用某父类的方法</em></strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ADAPHero</span> <span class="keyword">extends</span> <span class="title">Hero</span> <span class="keyword">implements</span> <span class="title">AD</span>, <span class="title">AP</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        AD.<span class="keyword">super</span>.attack();</span><br><span class="line">		<span class="comment">//或者AP.super.attack();</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181113/java学习笔记5/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="永川长江大桥">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="港桥城事">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/20181113/java学习笔记5/" itemprop="url">java学习笔记5</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-13T15:25:50+08:00">
+                2018-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="选择法-冒泡法"><a href="#选择法-冒泡法" class="headerlink" title="选择法 冒泡法"></a>选择法 冒泡法</h1><p>选择法排序的思路：<br>把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来<br>比较完后，第一位就是最小的<br>然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来<br>比较完后，第二位就是第二小的<br>以此类推<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/20181113/java学习笔记5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181112/java学习笔记4/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1262,7 +1513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
