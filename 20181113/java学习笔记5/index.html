@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="港桥城事">
 <meta property="og:description" content="选择法 冒泡法选择法排序的思路：把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来比较完后，第一位就是最小的然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来比较完后，第二位就是第二小的以此类推">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-14T07:20:28.588Z">
+<meta property="og:updated_time" content="2018-11-16T03:31:31.261Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java学习笔记5">
 <meta name="twitter:description" content="选择法 冒泡法选择法排序的思路：把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来比较完后，第一位就是最小的然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来比较完后，第二位就是第二小的以此类推">
@@ -236,7 +236,7 @@
     <link itemprop="mainEntityOfPage" href="http://zhu4ce4.github.io/20181113/java学习笔记5/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永川长江大桥">
+      <meta itemprop="name" content="市长 江大桥">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -300,7 +300,8 @@
       
 
       
-        <h1 id="选择法-冒泡法"><a href="#选择法-冒泡法" class="headerlink" title="选择法 冒泡法"></a>选择法 冒泡法</h1><p>选择法排序的思路：<br>把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来<br>比较完后，第一位就是最小的<br>然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来<br>比较完后，第二位就是第二小的<br>以此类推<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Temp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">100</span>, <span class="number">90</span>, <span class="number">1</span>, <span class="number">56</span>, <span class="number">88</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt;a.length ; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[i] &gt; a[j]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = a[i];</span><br><span class="line">                    a[i] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="选择法-冒泡法"><a href="#选择法-冒泡法" class="headerlink" title="选择法 冒泡法"></a>选择法 冒泡法</h1><p>选择法排序的思路：<br>把第一位和其他所有的进行比较，只要比第一位小的，就换到第一个位置来<br>比较完后，第一位就是最小的<br>然后再从第二位和剩余的其他所有进行比较，只要比第二位小，就换到第二个位置来<br>比较完后，第二位就是第二小的<br>以此类推<br><a id="more"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Temp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">100</span>, <span class="number">90</span>, <span class="number">1</span>, <span class="number">56</span>, <span class="number">88</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt;a.length ; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[i] &gt; a[j]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = a[i];</span><br><span class="line">                    a[i] = a[j];</span><br><span class="line">                    a[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>冒泡法排序的思路：<br>第一步：从第一位开始，把相邻两位进行比较<br>如果发现前面的比后面的大，就把大的数据交换在后面，循环比较完毕后，最后一位就是最大的<br>第二步： 再来一次，只不过不用比较最后一位<br>以此类推<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Temp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">100</span>, <span class="number">90</span>, <span class="number">1</span>, <span class="number">56</span>, <span class="number">88</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length - <span class="number">1</span>; i++) &#123;	<span class="comment">//比较次数</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; a.length - i - <span class="number">1</span>; j++) &#123;	<span class="comment">//需要从0开始比较到.....(根据比较到第几次来推算)</span></span><br><span class="line">                <span class="keyword">if</span> (a[j] &gt; a[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                    <span class="keyword">int</span> temp = a[j];</span><br><span class="line">                    a[j] = a[j + <span class="number">1</span>];</span><br><span class="line">                    a[j + <span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(a));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>注：增强型for循环只能用来取值，却不能用来修改数组里的值<br>class Temp {<br>    public static void main(String[] args) {<br>        int[] a = new int[]{100, 25, 1, 56, 88};</p>
 <pre><code>    for (int i = 0; i &lt; a.length; i++) {
@@ -429,8 +430,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">永川长江大桥</p>
-              <p class="site-description motion-element" itemprop="description">永川朱沱松溉何埂港桥新城旧事</p>
+              <p class="site-author-name" itemprop="name">市长 江大桥</p>
+              <p class="site-description motion-element" itemprop="description">港桥新城往事</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -440,7 +441,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,7 +511,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">永川长江大桥</span>
+  <span class="author" itemprop="copyrightHolder">市长 江大桥</span>
 
   
 </div>
